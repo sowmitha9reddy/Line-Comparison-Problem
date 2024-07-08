@@ -7,13 +7,17 @@ import java.util.Scanner;
 public class LineComparison {
 	public static void main(String[] args) {
 		System.out.println("Welcome to Line Comparision Computation Program in Master Branch");
-		Scanner scan= new Scanner(System.in);
-		int x1=scan.nextInt();
-		int x2=scan.nextInt();
-		int y1=scan.nextInt();
-		int y2=scan.nextInt();
-		Line l1=new Line(x1,x2,y1,y2);
-		System.out.println("Length of line:"+l1.calculateLength());
+		
+		Line l1=new Line(0,1,1,2);
+		Line l2=new Line(0,1,1,2);
+		Line l3=new Line(0,1,3,3);
+		
+		System.out.println(l1.equals(l2));
+		System.out.println(l1.hashCode());
+		System.out.println(l2.hashCode());
+		System.out.println(l2.equals(l3));
+		System.out.println(l3.hashCode());
+		
 		
 	}
 

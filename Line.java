@@ -1,6 +1,8 @@
 package Line_Comparision;
 
- class Line {
+import java.util.Objects;
+
+class Line {
 	private int x1;
 	private int y2;
 	private int y1;
@@ -30,4 +32,26 @@ package Line_Comparision;
 		
 		return length;
 	}
+	@Override
+	public boolean equals(Object obj) {
+	         
+	        if (this == obj) {
+	            return true;
+	        }
+	        if (obj == null || getClass() != obj.getClass()) {
+	            return false;
+	        }
+	        Line line = (Line) obj;
+	        return (x1 == line.x1 && y1 == line.y1 && x2 == line.x2 && y2 == line.y2) ||
+	               (x1 == line.x2 && y1 == line.y2 && x2 == line.x1 && y2 == line.y1);
+	    }
+
+	    @Override
+	    public int hashCode() {
+	        return x1+y1+x2+y2;
+	    }
+	  
+	    
+	
+	
 }
