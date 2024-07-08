@@ -1,6 +1,6 @@
 package Line_Comparision;
 
-import java.util.Objects;
+
 
 class Line {
 	private int x1;
@@ -46,12 +46,8 @@ class Line {
 	               (x1 == line.x2 && y1 == line.y2 && x2 == line.x1 && y2 == line.y1);
 	    }
 
-	    @Override
-	    public int hashCode() {
+	 @Override
+	 public int hashCode() {
 	        return x1+y1+x2+y2;
-	    }
-	  
-	    
-	
-	
+	 }
 }
