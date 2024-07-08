@@ -18,6 +18,8 @@ public class LineComparison {
 		System.out.println(l2.equals(l3));
 		System.out.println(l3.hashCode());
 		
+		System.out.println(l1.compareTo(l2));
+		System.out.println(l3.compareTo(l1));
 		
 	}
 

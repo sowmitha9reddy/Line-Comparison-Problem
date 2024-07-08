@@ -2,7 +2,7 @@ package Line_Comparision;
 
 import java.util.Objects;
 
-class Line {
+class Line  implements Comparable<Line>{
 	private int x1;
 	private int y2;
 	private int y1;
@@ -32,6 +32,26 @@ class Line {
 		
 		return length;
 	}
+	 
+	@Override
+	public String toString() {
+		
+		return x1+" "+x2+" "+y1+" "+y2;
+	}
+	@Override
+	public int compareTo(Line l2) {
+		Line line1=this;
+		System.out.println(line1);
+		Line line2=l2;
+		System.out.println(line2);
+		Float line1Length=line1.calculateLength();
+		Float line2Length=line2.calculateLength();
+		return (-1)*line2Length.compareTo(line2Length);
+		
+
+	} 
+	
+	
 	@Override
 	public boolean equals(Object obj) {
 	         
@@ -50,6 +70,7 @@ class Line {
 	    public int hashCode() {
 	        return x1+y1+x2+y2;
 	    }
+		
 	  
 	    
 	
