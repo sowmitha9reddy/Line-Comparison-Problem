@@ -26,8 +26,8 @@ package Line_Comparision;
 		return x2;
 	}
 	public float calculateLength() {
-		length=(float)Math.sqrt((x2-x1)^2+(y2-y1)^2);
+		lengthOfLine=(float)Math.sqrt((x2-x1)^2+(y2-y1)^2);
 		
-		return length;
+		return lengthOfLine;
 	}
 }
